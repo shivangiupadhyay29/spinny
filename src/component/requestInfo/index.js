@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import constants  from '../../constants';
-import PropTypes from "prop-types";
 
 export default ( { requestLink, isCached = false, delay=null, loading } ) => {
     return (<div>
