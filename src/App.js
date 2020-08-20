@@ -11,7 +11,7 @@ function App() {
             <div className='box'>
                   <div className="container">
                           <Block.SearchBox />
-                          <Block.List />
+                          <Block.List/>
                   </div>
           </div>
   </Provider>

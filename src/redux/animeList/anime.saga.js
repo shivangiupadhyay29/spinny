@@ -8,7 +8,7 @@ function* fetchAnimeList(action){
     const { page = 0, limit, q='' } = params;
     const url = apiUrl() + (params ? '?' : '');
     const json = yield api( url, type.GET, params).then(response => response);
-    yield put({ type: animeConstant.ANIME_LIST_RECEIVED,  json: json });
+    yield put({ type: animeConstant.ANIME_LIST_RECEIVED,  json: json, query: q });
 }
 
 

@@ -1,0 +1,33 @@
+.style-container {
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    margin-top:20%
+}
+
+.list-item-container{
+    border: 2px solid black;
+    background-color: white;
+    margin: 5%;
+    flex-basis: 25%;
+}
+
+.item-align{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+  flex-basis:80%;
+  order:1;
+}
+
+.title{
+flex-basis:20%;
+order:2;
+}

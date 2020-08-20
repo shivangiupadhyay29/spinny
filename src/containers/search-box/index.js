@@ -22,6 +22,8 @@ function SearchBox(props){
     const page = useSelector( state => state.anime.page );
     const limit = useSelector(state => state.anime.limit);
     const loading = useSelector(state => state.anime.loading);
+    const isCached  = useSelector(state => state.anime.request_cached);
+    const delay  = useSelector(state => state.anime.request_cache_expiry);
 
 
 
@@ -51,7 +53,6 @@ function SearchBox(props){
 
     return (
         <div className='header'>
-              
                     <div className="">
                         <div className="flex align-items-center"> 
                             <input className="form-control form-control-lg margin-top" type="text" value={query} onKeyDown={searchAnimeHandler} onChange={updateState}  placeholder={`${constants.SEARCH_PLACEHOLDER}`} />
@@ -59,9 +60,7 @@ function SearchBox(props){
                         </div>
                         {error && <div className="red">{error}</div>}
                     </div>
-
-                    <RequestInfo requestLink={requestLink} isCached={props.isCached} delay={props.delay} />
-               
+                    <RequestInfo requestLink={requestLink} isCached={isCached} delay={delay} loading={loading}/>
         </div>
     )
 
